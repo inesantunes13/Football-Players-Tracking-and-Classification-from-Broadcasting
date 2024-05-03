@@ -20,7 +20,7 @@ ball_loc should be the x,y, width and height of the ball.
 The initial step to approach this problem was to choose a YOLO model that could do an initial detectiong of the objects found.
 THe one used was pre-trained yolov5 from ultralytics with CoCo dataset. 
 
-![Alt text](../media/yolov5_initial_detection.png?raw=true)
+![Alt text](../media/images/yolov5_initial_detection.png?raw=true)
 
 The pre-trained model allowed for each player to be detected and classified as a person, and the ball to be classified as a sports ball. 
 However, it was missing a further distinction among the person class, into:
@@ -63,16 +63,16 @@ After all the objects were re-assigned to a new class, the final step was to int
 
 Furthermore, at every 5 frames, it also counts the number of people detected per team and reports on the ball location in pixels. This file is saved in a "Jsons" folder, along with the "labels" folder (with the new .txt files) and the "crop" folder.
 
-![Alt text](../media/final_folder_structure.png?raw=true)
+![Alt text](../media/images/final_folder_structure.png?raw=true)
 
 
 ### Final conclusions:
 The overall experiment was successfull. Here's an example of the final output video and the correpondent .json file:
 
-![Alt text](../media/final_output_video.png?raw=true)
+![Alt text](../media/images/final_output_video.png?raw=true)
 
 
-![Alt text](../media/final_output_json.png?raw=true)
+![Alt text](../media/images/final_output_json.png?raw=true)
 
 However:
 - one of the clips had more innaccuracies, probalby due to shaded area in the image 
